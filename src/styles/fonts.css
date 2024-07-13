@@ -1,0 +1,13 @@
+@layer base {
+  @font-face {
+    font-family: "Poppins";
+    src: local("Poppins Medium"), local("Poppins-Medium");
+    src: url("assets/fonts/Poppins-Medium.eot");
+    src:
+      url("assets/fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"),
+      url("assets/fonts/Poppins-Medium.woff") format("woff"),
+      url("assets/fonts/Poppins-Medium.ttf") format("ttf");
+    font-weight: 500;
+    font-style: normal;
+  }
+}
