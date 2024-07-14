@@ -1,4 +1,6 @@
+import React from "react";
 import { createRoot } from "react-dom/client";
+import App from "./App";
 import "./index.css";
 
 const root = document.getElementById("root");
@@ -7,6 +9,8 @@ if (!root) {
 }
 const container = createRoot(root);
 
-container.render(<div>
-  <h1>Hello world</h1>
-</div>);
+container.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);

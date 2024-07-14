@@ -1,1 +1,2 @@
-export { cn } from "./utils/utils";
+export { cn } from "./utils/cn";
+export { uid } from "./utils/uid";

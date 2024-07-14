@@ -62,15 +62,26 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@googlemaps/markerclusterer": "^2.5.3",
+    "@radix-ui/react-scroll-area": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.1",
+    "@vis.gl/react-google-maps": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "firebase": "^10.12.3",
+    "install": "^0.13.0",
     "lucide-react": "^0.378.0",
+    "next-themes": "^0.3.0",
+    "npm": "^10.8.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
+    "sonner": "^1.5.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "zustand": "^4.5.4"
   },
   "browserslist": {
     "production": [

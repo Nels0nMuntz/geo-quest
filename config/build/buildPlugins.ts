@@ -15,7 +15,7 @@ export function buildPlugins({ mode, paths, analyzer }: BuildOptions): Configura
   const envKeys = Object.keys(env).reduce<Record<string, string>>((prev, next) => {
     prev[`process.env.${next}`] = JSON.stringify(env[next]);
     return prev;
-  }, {});
+  }, {});  
 
   const plugins: Configuration["plugins"] = [
     new HtmlWebpackPlugin({
