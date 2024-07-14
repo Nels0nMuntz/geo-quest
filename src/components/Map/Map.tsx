@@ -21,7 +21,7 @@ export default function Map() {
   }, []);
 
   return (
-    <main>
+    <main className="h-[100dvh] w-full">
       <GoogleMaps
         defaultCenter={{ lat: -33.860664, lng: 151.208138 }}
         defaultZoom={13}
