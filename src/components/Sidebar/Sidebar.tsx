@@ -28,6 +28,7 @@ export default function Sidebar() {
               <Button
                 variant='ghost'
                 size='icon'
+                className="sm:hidden"
                 onClick={handleOpen}
               >
                 <SquareX className='h-8 w-8' />
