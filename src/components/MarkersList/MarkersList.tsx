@@ -43,10 +43,11 @@ export default function MarkersList({ points, onDragChange }: Props) {
 
   return (
     <>
-      {points.map((point) => (
+      {points.map((point, index) => (
         <AdvancedMarker
           key={point.id}
           {...point}
+          label={String(index + 1)}
           onDragChange={onDragChange}
           setMarkerRef={setMarkerRef}
         />

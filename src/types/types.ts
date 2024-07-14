@@ -7,7 +7,6 @@ export interface Location {
 
 export interface Marker {
   id: UniqueId;
-  label: number;
   timestamp: number;
   location: Location;
 }

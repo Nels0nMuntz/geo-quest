@@ -23,10 +23,9 @@ const useAppStore = create<AppState & AppActions>((set, get) => ({
       }
     },
     addMarker: async (location) => {
-      const { markers, actions } = get();
+      const { actions } = get();
       const marker: Marker = {
         id: uid(),
-        label: markers.length + 1,
         timestamp: Date.now(),
         location,
       };

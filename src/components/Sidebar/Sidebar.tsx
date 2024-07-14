@@ -14,8 +14,8 @@ export default function Sidebar() {
         <h1 className='mb-4 text-2xl'>Quests</h1>
         {deleteAllVisible && <Button onClick={handleClick}>Delete All</Button>}
         <ul className='flex flex-col gap-y-4'>
-          {markers.map((marker) => (
-            <Quest key={marker.id} {...marker} />
+          {markers.map((marker, index) => (
+            <Quest key={marker.id} id={marker.id} label={String(index + 1)} />
           ))}
         </ul>
       </aside>

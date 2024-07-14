@@ -1,17 +1,18 @@
 import { AdvancedMarker } from "@vis.gl/react-google-maps";
 import type { Marker as GoogleMarker } from "@googlemaps/markerclusterer";
 import { Marker } from "@/types";
-import { forwardRef, useCallback } from "react";
+import { useCallback } from "react";
 import { LucideCircleX } from "lucide-react";
 import { useActions } from "@/store";
 import { Button } from "../ui/button";
 
 interface Props extends Marker {
+  label: string;
   onDragChange: (value: Marker | null) => void;
   setMarkerRef?: (marker: GoogleMarker, key: string) => void;
 }
 
-export default function Marker({ onDragChange, setMarkerRef, ...marker }: Props) {
+export default function Marker({ onDragChange, setMarkerRef, label, ...marker }: Props) {
   const { deleteMarker, updateMarker } = useActions();
   const hendleDelete = () => {
     deleteMarker(marker.id);
@@ -37,15 +38,13 @@ export default function Marker({ onDragChange, setMarkerRef, ...marker }: Props)
       key={marker.id}
       position={marker.location}
       draggable
-      // onClick={(e) => e.stop()}
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
-      // clickable={false}
       className='focus-visible:outline-none'
       ref={handleMarkerRef}
     >
       <div className='relative -top-2 rounded-sm bg-blue-500 px-4 py-3 text-white before:absolute before:left-1/2 before:top-full before:h-0 before:w-0 before:-translate-x-1/2 before:border-x-8 before:border-t-8 before:border-solid before:border-x-transparent before:border-t-blue-500'>
-        {marker.label}
+        {label}
         <Button
           className='absolute right-0 top-0 z-10 h-4 w-4 -translate-y-2 translate-x-2 rounded-full bg-transparent'
           variant='ghost'
